@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Youtube Engine Search</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style/Css.css" rel="stylesheet"/>
+        <link href="style/jquery.fancybox.min.css" rel="stylesheet" type="text/css" media="screen"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script/js.js"></script>
+        <script type="text/javascript" src="script/jquery.fancybox.min.js"></script>
+        <script>
+            /*the script below is the one use to play the youtube videos on the fancy box*/
+            $(document).ready(function(){
+              $('[data-fancybox]').fancybox({
+                youtube: {
+                    controls: 0,
+                    showinfo: 0
+                }});  
+            });
+            
+        </script>
+
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <h1>Search<span>Vidz</span></h1>
+                <p>Search all Youtube videos</p>
+            </header>
+            <section>
+                <form id="search-form" name="search-form" onsubmit="return search()">
+                    <div class="fieldcontainer">
+                        <input type="search" id="query" class="search-field" placeholder="Search youtube......">
+                        <input type="submit" id="search-btn" name="search-btn" value="">
+                    </div>
+
+                </form>
+                <ul id="results"></ul>
+                <div id="buttons"></div>
+            </section>
+            <footer>
+                <p>Copyright &copy; 2018 all right Reserved</p>
+            </footer>
+        </div>
+    </body>
+</html>
